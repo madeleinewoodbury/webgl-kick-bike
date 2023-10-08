@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Webgl-kick-bike</title>
+    <script src="./js/lib/cuon-matrix.js"></script>
+    <script src="./js/lib/gl.matrix.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>WebGL Kick Bike</h1>
+      <ul>
+        <li>Move camera: <span>WASD</span></li>
+        <li>Zoom: <span>V/B</span></li>
+        <li>
+          Control bike
+          <div class="arrows">
+            <span class="left">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="lucide lucide-arrow-left-square"
+              >
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+                <path d="m12 8-4 4 4 4" />
+                <path d="M16 12H8" /></svg
+            ></span>
+            <span class="up"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="lucide lucide-chevron-up-square"
+              >
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+                <path d="m8 14 4-4 4 4" /></svg
+            ></span>
+            <span class="down"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="lucide lucide-chevron-down-square"
+              >
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+                <path d="m16 10-4 4-4-4" /></svg
+            ></span>
+            <span class="right">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="lucide lucide-chevron-right-square"
+              >
+                <rect width="18" height="18" x="3" y="3" rx="2" />
+                <path d="m10 8 4 4-4 4" />
+              </svg>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <aside>
+      <div class="toggle">
+        <button id="flatPackSwitch">
+          <span id="packDown">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="lucide lucide-toggle-left"
+            >
+              <rect width="20" height="12" x="2" y="6" rx="6" ry="6" />
+              <circle cx="8" cy="12" r="2" />
+            </svg>
+          </span>
+          <span id="packUp" class="hide">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="lucide lucide-toggle-right"
+            >
+              <rect width="20" height="12" x="2" y="6" rx="6" ry="6" />
+              <circle cx="16" cy="12" r="2" />
+            </svg>
+          </span>
+        </button>
+        <span id="shaderTitle"> Flatpack </span>
+      </div>
+
+      <p>FPS: <span id="fps"></span></p>
+    </aside>
+    <main>
+      <canvas id="canvas"></canvas>
+    </main>
+    <script src="./js/app.js" type="module"></script>
+  </body>
+</html>
